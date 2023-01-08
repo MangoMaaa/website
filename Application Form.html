@@ -1,0 +1,123 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>master page</title>
+	<script type="text/javascript">
+		const date = new Date()
+		document.write(date.getDay())	
+		
+		const clear = () => {
+			thing = ['Forename','Surname','Email','Tel','Address','Comments'];
+			
+			for (let i of thing) { // for loop for each string above in the array
+				document.getElementById(i).value = "" // This resets the form values to empty
+			}
+		}
+		
+		const refresh = () => {
+			window.location.href = window.location;	// Refreshes the page
+		}
+		
+		
+		const apply = () => {
+			var link = "mailto: HotBeansContactUs@HotBeans.com"
+			+ "?cc="+encodeURIComponent(document.getElementById('Email').value +"\n")
+			+ "&body="+encodeURIComponent(document.getElementById('Forename').value +"\n")
+			+ "&body="+encodeURIComponent(document.getElementById('Surname').value +"\n")
+			+ "&body="+encodeURIComponent(document.getElementById('Comments').value)
+			
+			console.log(document.getElementById("Forename"))
+		
+			
+			if (document.getElementById("Forename").value == ""){
+				return alert("Forename cannot be blank");
+			} else if (document.getElementById("Surname").value == ""){
+				return alert("Surname cannot be blank")
+			} else if (document.getElementById("Email").value == ""){
+				return alert("Email cannot be blank")
+			} else if (document.getElementById("Tel").value == ""){
+				return alert("telephone cannot be blank")
+			} else if (document.getElementById("Address").value == ""){
+				return alert("Address cannot be blank")
+			} else {
+				window.location.href = link;
+			}
+		}
+	</script>
+	<script type = "text/Javascript"> function refresh () {window.location.href = window.location}
+	</script>
+<link href="CSS_Universal.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table width="90%" border="1" align="center">
+	<form>
+		<input type=button value="Close Window" onClick="javascript:window.close();">
+		<input type=button value="Refresh Page" onClick="refresh()">
+	</form>
+  <tbody>
+    <tr>
+      <td width="28%"><a href="file:///C:/Users/T0076362/OneDrive%20-%20Cardinal%20Newman%20College/LOB/Website/website/HomePage.html"><img src="Hot Beans Logo.png" width="381" height="105"></a></td>
+      <td><h1>Application Form</h1></td>
+      <td colspan="2"><h2>Search bar</h2></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="Application Form.html">Apply Here</a></td>
+      <td width="32%" align="center" valign="middle"><a href="Job Offers.html">Job Offers</a></td>
+      <td width="17%" align="center"><a href="Gallery.html">Gallery</a></td>
+      <td width="23%" align="center"><a href="About Us.html">About Us</a></td>
+    </tr>
+    <tr>
+      <td colspan="4">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="67"><a href="https://twitter.com/i/flow/login"><img src="Twitter.png" width="146" height="117"></a></td>
+      <td><form id="form1" name="form1" method="post">
+        <p>&nbsp;</p>
+        <p>
+          <label for="Forename">Forename:</label>
+          <input name="Forename" type="text" required="required" id="Forename">
+        </p>
+        <p>
+          <label for="Surname">Surname:</label>
+          <input name="Surname" type="text" required="required" id="Surname">
+        </p>
+        <p>
+          <label for="email">Email:</label>
+          <input name="email" type="email" required="required" id="Email">
+        </p>
+        <p>
+          <label for="tel">Tel:</label>
+          <input name="tel" type="tel" required="required" id="Tel">
+        </p>
+        <p>
+          <label for="Address">Address:</label>
+          <input name="Address" type="text" required="required" id="Address">
+        </p>
+        <p>
+          <label for="textfield6"></label>
+          <label for="Comments">Comments:</label>
+          <textarea name="Comments" id="Comments"></textarea>
+        </p>
+        <p>&nbsp;<button type=button onclick="apply();">Send For</button><div>
+		<button onclick = "clear()">Clear Form</button>
+	</div></p>
+		  	
+        <p>&nbsp;</p>
+      </form></td>
+      <td colspan="2" align="left" valign="middle"><h3>&nbsp;</h3></td>
+    </tr>
+    <tr>
+      <td height="150"><a href="https://www.linkedin.com/login"><img src="LinkedIn.png" width="164" height="128"></a></td>
+      <td><a href="https://en-gb.facebook.com/"><img src="Facebook.png" width="145" height="105"></a></td>
+      <td colspan="2" align="left" valign="middle"><h3>Company Information:</h3>
+        <p>Phone Number: 07 218712 19261</p>
+        <p>telephone number: +44 3286 78944</p>
+      <p>address: HP3 HP1</p></td>
+		
+    </tr>
+  </tbody>
+</table>
+	
+		
+</body>
+</html>
