@@ -6,15 +6,15 @@
 		const date = new Date()
 		document.write(date.getDay())	
 		
-		const clear = () => {
-			thing = ['Forename','Surname','Email','Tel','Address','Comments'];
+		const clearForm = () => {
+			formDataIDs = ['Forename','Surname','Email','Tel','Address','Comments'];
 			
-			for (let i of thing) { // for loop for each string above in the array
-				document.getElementById(i).value = "" // This resets the form values to empty
+			for (let id of formDataIDs) { // for loop for each string above in the array
+				document.getElementById(id).value = "" // This resets the form values to empty
 			}
 		}
 		
-		const refresh = () => {
+		const refreshPage = () => {
 			window.location.href = window.location;	// Refreshes the page
 		}
 		
@@ -44,15 +44,13 @@
 			}
 		}
 	</script>
-	<script type = "text/Javascript"> function refresh () {window.location.href = window.location}
-	</script>
 <link href="CSS_Universal.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <table width="90%" border="1" align="center">
 	<form>
 		<input type=button value="Close Window" onClick="javascript:window.close();">
-		<input type=button value="Refresh Page" onClick="refresh()">
+		<input type=button value="Refresh Page" onClick="refreshPage()">
 	</form>
   <tbody>
     <tr>
@@ -99,7 +97,7 @@
           <textarea name="Comments" id="Comments"></textarea>
         </p>
         <p>&nbsp;<button type=button onclick="apply();">Send For</button><div>
-		<button onclick = "clear()">Clear Form</button>
+		<button onclick = "clearForm()">Clear Form</button>
 	</div></p>
 		  	
         <p>&nbsp;</p>
