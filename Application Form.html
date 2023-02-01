@@ -3,8 +3,9 @@
 <meta charset="utf-8">
 <title>master page</title>
 	<script type="text/javascript">
-		const date = new Date()
-		document.write(date.getDay())	
+		const date = new Date();
+		daysOfWeek = ['Monday','Tuesday','Wednesday','Thursday','Friday'];
+		document.write(daysOfWeek[date.getDay()]);
 		
 		const clearForm = () => {
 			formDataIDs = ['Forename','Surname','Email','Tel','Address','Comments'];
